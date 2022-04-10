@@ -2,6 +2,10 @@
   margin: 0;
   padding: 0;
 }
+*::selection {
+  color: rgb(0, 0, 0);
+  background: rgb(255, 251, 29);
+}
 :root {
   --first-color: #f0f;
   --second-color: #fff;
@@ -10,6 +14,7 @@
   --page-bg: rgb(41, 42, 43);
   --text-color: rgb(232, 235, 226);
   --text-color-medium: rgb(64, 185, 233);
+  --text-color-medium: rgb(64, 233, 225);
 }
 a {
   text-decoration: none;
@@ -87,6 +92,7 @@ header li:not(:last-of-type) {
   position: absolute;
   left: 0;
   top: 0;
+  user-select: none;
 }
 @keyframes rotateHue {
   0% {
@@ -122,6 +128,7 @@ header li:not(:last-of-type) {
   height: auto;
   width: 15vw;
   display: block;
+  user-select: none;
 }
 .intro-text-name {
   font-size: 40px;
@@ -185,15 +192,27 @@ h3 {
   padding: 0 0.5rem;
   font-size: 24px;
 }
+:root {
+  --project-padding: 10vw;
+}
 /* PROJECTS */
 .project {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  margin-bottom: 4rem;
+  margin-bottom: var(--project-padding);
+  position: relative;
 }
-.project-description > * + * {
-  margin-top: 1rem;
+.project:not(:last-of-type):after {
+  position: absolute;
+  content: "";
+  width: 6rem;
+  height: 1px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: calc(var(--project-padding) * -1 / 2);
+  background: var(--text-color);
+  opacity: 0.5;
 }
 .project-images {
   position: relative;
@@ -263,9 +282,12 @@ h3 {
   transform-origin: top;
   opacity: 0.06;
 }
+.project-description > * + * {
+  margin-top: 1rem;
+}
 .project-description {
   display: inline-block;
-  max-width: 600px;
+  width: 600px;
 }
 .project-description span {
   color: var(--text-color-medium);
