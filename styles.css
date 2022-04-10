@@ -53,18 +53,29 @@ header li {
 header li:not(:last-of-type) {
   margin-right: 2rem;
 }
-.section:not(.intro) {
-  padding: 4rem 0;
-}
 .section {
-  border: 1px solid red;
+  position: relative;
+}
+.section:not(:first-of-type) {
+  padding: 7rem 0 4rem;
+  background: linear-gradient(rgb(43 43 44 / 32%), rgba(47, 42, 63, 0));
+  clip-path: polygon(0 100%, 0 0, 50% 3rem, 100% 0, 100% 100%);
+}
+.section:not(:last-of-type):after {
+  position: absolute;
+  content: "";
+  /* width: 3rem; */
+  height: 1px;
+  left: 50%;
+  bottom: -1.5rem;
+  background: var(--text-color);
 }
 /* INTRO */
 .intro {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 95vh;
 }
 .intro-photo {
   width: 10vw;
@@ -206,8 +217,8 @@ h3 {
 .project:not(:last-of-type):after {
   position: absolute;
   content: "";
-  width: 6rem;
-  height: 1px;
+  width: 1px;
+  height: 1rem;
   left: 50%;
   transform: translateX(-50%);
   bottom: calc(var(--project-padding) * -1 / 2);
@@ -309,4 +320,38 @@ h3 {
 .project-links a:hover {
   background: var(--text-color);
   color: #000; /* TODO use -text-color-dark*/
+}
+/* CONTACT */
+.contact {
+  width: fit-content;
+  margin: 0 auto;
+}
+.contact-lets-chat {
+  margin: 2rem 0;
+  font-size: 30px;
+}
+.contact-line {
+  display: flex;
+  align-items: center;
+}
+.contact-line {
+  margin: 1rem 0;
+}
+.contact-line:hover {
+  color: var(--text-color);
+}
+.contact-line a {
+  display: inline-block;
+  color: var(--text-color-medium);
+  text-decoration: underline;
+}
+.contact-icon {
+  fill: var(--text-color);
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-right: 0.6rem;
+  stroke: none;
+}
+.section.contact {
+  padding-bottom: 10rem;
 }
