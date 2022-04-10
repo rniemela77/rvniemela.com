@@ -1,3 +1,7 @@
+@import 'bg-noise.css';
+@import 'bg-pattern.css';
+@import 'bg-vignette.css';
+
 * {
   margin: 0;
   padding: 0;
