@@ -48,15 +48,18 @@ header li {
 header li:not(:last-of-type) {
   margin-right: 2rem;
 }
+.section:not(.intro) {
+  padding: 4rem 0;
+}
 .section {
-  height: 90vh;
-  border: 10px solid black;
+  border: 1px solid red;
 }
 /* INTRO */
 .intro {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 .intro-photo {
   width: 10vw;
@@ -124,12 +127,27 @@ header li:not(:last-of-type) {
   font-size: 40px;
   font-weight: bold;
 }
+.intro-text-name span {
+  color: var(--text-color-medium);
+}
 .intro-text-who-i-am {
   margin: 1.5rem 0 0.75rem;
 }
 .section h2 {
   text-align: center;
   margin-bottom: 3rem;
+  padding: 0 0.1rem;
+}
+h2:before,
+h2:after {
+  color: var(--text-color-medium);
+  opacity: 0.5;
+}
+h2:before {
+  content: "<";
+}
+h2:after {
+  content: ">";
 }
 /* EXPERIENCE */
 .experience {
@@ -142,7 +160,7 @@ header li:not(:last-of-type) {
   margin: 0 auto;
 }
 .experience-item:not(:last-of-type) {
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 .experience-item ul {
   list-style-image: url("./assets/check.png");
@@ -170,16 +188,36 @@ h3 {
 /* PROJECTS */
 .project {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  margin-bottom: 4rem;
 }
-.project-name {
-  flex: 0 0 100%;
-  text-align: center;
+.project-description > * + * {
+  margin-top: 1rem;
 }
 .project-images {
   position: relative;
+}
+.project-images-tooltip {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  background: rgba(0, 0, 0, 0.904);
+  padding: 1rem 2rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+.project-images-tooltip:hover {
+  opacity: 1;
+}
+.project-image-real {
+  cursor: pointer;
+}
+.project-image-real:hover ~ .project-images-tooltip {
+  opacity: 1;
 }
 .project-image {
   display: inline-block;
@@ -219,16 +257,15 @@ h3 {
 }
 .project-image-reflection {
   position: absolute;
-  bottom: -130%;
+  bottom: -138%;
   left: 0;
-  transform: scaleY(-0.3);
+  transform: scaleY(-0.4);
   transform-origin: top;
   opacity: 0.06;
 }
 .project-description {
-  max-width: 500px;
   display: inline-block;
-  padding: 1.5rem 0;
+  max-width: 600px;
 }
 .project-description span {
   color: var(--text-color-medium);
@@ -238,12 +275,6 @@ h3 {
   font-size: 20px;
   transform: rotate(25deg);
   color: var(--text-color-medium);
-}
-.project-description p {
-  margin-top: 0.5rem;
-}
-.project-links {
-  margin-top: 1rem;
 }
 .project-links a {
   border: 1px solid var(--text-color);

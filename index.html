@@ -40,7 +40,7 @@
             height="193"
             class="intro-text-hello"
           />
-          <p class="intro-text-name">I'm Robert Niemela.</p>
+          <p class="intro-text-name">I'm <span>Robert Niemela</span>.</p>
           <p class="intro-text-who-i-am">
             I'm a <strong>Web Developer</strong> currently based in Phoenix, AZ.
           </p>
@@ -61,6 +61,7 @@
             <li>JavaScript <small>+ jQuery, Vue, Nuxt, React</small></li>
             <li>PHP</li>
             <li>SQL</li>
+            <li>Adobe Software (XD, Photoshop)</li>
           </ul>
         </div>
 
@@ -83,14 +84,14 @@
       <section class="section projects">
         <h2>Projects</h2>
         <div class="project">
-          <h3 class="project-name">Darlingdinnersready.com</h3>
-
           <div class="project-images">
-            <div class="project-image project-image--desktop">
-              <img src="/assets/ddr-desktop.jpg" />
-            </div>
-            <div class="project-image project-image--mobile">
-              <img src="/assets/ddr-mobile.jpg" />
+            <div class="project-image-real">
+              <div class="project-image project-image--desktop">
+                <img src="/assets/ddr-desktop.jpg" />
+              </div>
+              <div class="project-image project-image--mobile">
+                <img src="/assets/ddr-mobile.jpg" />
+              </div>
             </div>
 
             <div class="project-image-reflection">
@@ -101,9 +102,14 @@
                 <img src="/assets/ddr-mobile.jpg" />
               </div>
             </div>
+
+            <div class="project-images-tooltip">View Site</div>
           </div>
 
           <div class="project-description">
+            <h3 class="project-name">
+              <a href="/">Darlingdinnersready.com</a>
+            </h3>
             <div>Tools: React, Gatsby, Sanity.io</div>
             <p>
               Uses the <span>React</span> framework to build the site's
@@ -130,8 +136,6 @@
         </div>
 
         <div class="project">
-          <h3 class="project-name">CSS Motion Animation</h3>
-
           <div class="project-images">
             <div class="project-image project-image--desktop">
               <img src="/assets/animation-desktop.jpg" />
@@ -139,14 +143,28 @@
             <div class="project-image project-image--mobile">
               <img src="/assets/animation-mobile.jpg" />
             </div>
+
+            <div class="project-image-reflection">
+              <div class="project-image project-image--desktop">
+                <img src="/assets/animation-desktop.jpg" />
+              </div>
+              <div class="project-image project-image--mobile">
+                <img src="/assets/animation-mobile.jpg" />
+              </div>
+            </div>
           </div>
 
           <div class="project-description">
-            <div>Tools: HTML, CSS</div>
+            <h3 class="project-name">CSS Motion Animation</h3>
+            <div>Tools: HTML and CSS</div>
             <p>
-              Uses <span>HTML</span> and <span>CSS</span> to create an
-              infinite-looping animation
+              Uses <span>HTML</span> and <span>CSS</span> to create a detailed
+              animation
             </p>
+
+            <div class="project-links">
+              <a href="/">View Site</a><a href="/">View Code</a>
+            </div>
           </div>
         </div>
 
