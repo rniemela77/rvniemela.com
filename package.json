@@ -1,0 +1,17 @@
+{
+  "name": "rvniemela.com",
+  "version": "1.0.0",
+  "description": "Portfolio Website",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rniemela77/rvniemela.com.git"
+  },
+  "author": "Robert Niemela",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "prettier": "2.6.2"
+  }
+}
