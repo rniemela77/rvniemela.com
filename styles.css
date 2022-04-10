@@ -52,6 +52,7 @@ header li:not(:last-of-type) {
   height: 90vh;
   border: 10px solid black;
 }
+/* INTRO */
 .intro {
   display: flex;
   justify-content: center;
@@ -68,11 +69,11 @@ header li:not(:last-of-type) {
 }
 .intro-photo::before {
   position: absolute;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  content: '';
+  content: "";
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.603);
   border-radius: 50%;
   z-index: 1;
@@ -130,6 +131,7 @@ header li:not(:last-of-type) {
   text-align: center;
   margin-bottom: 3rem;
 }
+/* EXPERIENCE */
 .experience {
   display: flex;
   flex-direction: column;
@@ -142,7 +144,6 @@ header li:not(:last-of-type) {
 .experience-item:not(:last-of-type) {
   margin-bottom: 4rem;
 }
-
 .experience-item ul {
   list-style-image: url("./assets/check.png");
   list-style-position: inside;
@@ -153,17 +154,103 @@ header li:not(:last-of-type) {
 .experience-item small {
   color: var(--text-color-medium);
 }
-.experience-item h4 {
-  font-size: 1.3rem;
-}
 .experience-item p {
   font-style: italic;
 }
 .experience-item h3 {
+  margin: 0 0 1rem;
+}
+h3 {
   background: var(--text-color);
   display: inline-block;
-  color: #000;
-  padding: 0 .5rem;
+  color: #000; /* TODO use --font-dark*/
+  padding: 0 0.5rem;
   font-size: 24px;
-  margin: 0 0 1rem;
+}
+/* PROJECTS */
+.project {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.project-name {
+  flex: 0 0 100%;
+  text-align: center;
+}
+.project-images {
+  position: relative;
+}
+.project-image {
+  display: inline-block;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 4px solid black;
+}
+.project-image img {
+  object-fit: cover;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.project-image--desktop {
+  width: 400px;
+  height: 250px;
+}
+.project-image--mobile {
+  transform: translate(-3rem, -1rem);
+  height: 200px;
+  width: auto;
+  filter: drop-shadow(0px 5px 3px rgba(0, 0, 0, 0.623));
+  position: relative;
+}
+/* Phone "notch" */
+.project-image--mobile::after {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30%;
+  height: 0.2rem;
+  background: black;
+  content: "";
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.project-image-reflection {
+  position: absolute;
+  bottom: -130%;
+  left: 0;
+  transform: scaleY(-0.3);
+  transform-origin: top;
+  opacity: 0.06;
+}
+.project-description {
+  max-width: 500px;
+  display: inline-block;
+  padding: 1.5rem 0;
+}
+.project-description span {
+  color: var(--text-color-medium);
+}
+.project-description p:before {
+  content: "+";
+  font-size: 20px;
+  transform: rotate(25deg);
+  color: var(--text-color-medium);
+}
+.project-description p {
+  margin-top: 0.5rem;
+}
+.project-links {
+  margin-top: 1rem;
+}
+.project-links a {
+  border: 1px solid var(--text-color);
+  padding: 0.5rem 1rem;
+  display: inline-block;
+}
+.project-links a:hover {
+  background: var(--text-color);
+  color: #000; /* TODO use -text-color-dark*/
 }
