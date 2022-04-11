@@ -15,13 +15,13 @@
   }
 }
 
+// Typography
 html {
   font-size: 18px;
   font-family: Monospace, Arial, Helvetica, sans-serif;
   background: var(--color-page-bg);
   color: var(--color-font-light);
 }
-
 a {
   text-decoration: none;
   color: inherit;
@@ -29,7 +29,19 @@ a {
 p {
   line-height: 1.5;
 }
-
+h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 0 0.1rem;
+  font-size: 32px;
+}
+h3 {
+  background: var(--color-font-light);
+  display: inline-block;
+  color: var(--color-font-dark);
+  padding: 0 0.5rem;
+  font-size: 24px;
+}
 strong {
   background: var(--color-font-light);
   padding: 0 0.25rem;
@@ -39,58 +51,36 @@ strong {
 
 .section {
   position: relative;
+  padding-left: 2rem;
+  padding-right: 2rem;
   &:not(:first-of-type) {
-    padding: 7rem 0 4rem;
+    padding-top: 7rem;
+    padding-bottom: 4rem;
     background: linear-gradient(rgb(43 43 44 / 32%), rgba(47, 42, 63, 0));
     clip-path: polygon(0 100%, 0 0, 50% 3rem, 100% 0, 100% 100%);
   }
-  &:not(:last-of-type):after {
-    position: absolute;
-    content: '';
-    height: 1px;
-    left: 50%;
-    bottom: -1.5rem;
-    background: var(--color-font-light);
-  }
-  h2 {
-    text-align: center;
-    margin-bottom: 3rem;
-    padding: 0 0.1rem;
-    &:before,
-    &:after {
-      color: var(--color-accent);
-      opacity: 0.5;
-    }
-    &:before {
-      content: '<';
-    }
-    &:after {
-      content: '>';
-    }
-  }
-  h3 {
-    background: var(--color-font-light);
-    display: inline-block;
-    color: var(--color-font-dark); /* TODO use --font-dark*/
-    padding: 0 0.5rem;
-    font-size: 24px;
-  }
 }
+
 /* INTRO */
 .intro {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 95vh;
+  min-height: 95vh;
 }
 .intro-photo {
-  width: 10vw;
-  height: 10vw;
+  width: 10rem;
+  height: 10rem;
   background: rgb(48, 48, 48);
   border-radius: 50%;
   overflow: hidden;
   position: relative;
+  user-select: none;
+
+  // Glowing neon lights
   animation: rotateHue 6s infinite;
+
+  // Vignette
   &.intro-photo::before {
     position: absolute;
     top: 0;
@@ -98,9 +88,21 @@ strong {
     width: 100%;
     height: 100%;
     content: '';
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.603);
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.7);
     border-radius: 50%;
     z-index: 1;
+  }
+  // Blue haze on photo
+  &.intro-photo::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    mix-blend-mode: color-dodge;
+    background: rgb(53, 225, 255);
+    opacity: 0.05;
   }
   img {
     width: 100%;
@@ -108,28 +110,44 @@ strong {
     position: absolute;
     left: 0;
     top: 0;
-    user-select: none;
+    object-fit: cover;
   }
 }
 .intro-text {
   padding-left: 5rem;
   max-width: 30rem;
-}
-.intro-text-hello {
-  height: auto;
-  width: 15vw;
-  display: block;
-  user-select: none;
-}
-.intro-text-name {
-  font-size: 40px;
-  font-weight: bold;
-  span {
-    color: var(--color-accent);
+  .intro-text-hello {
+    height: auto;
+    width: clamp(5rem, 16vw, 7rem);
+    display: block;
+    user-select: none;
+  }
+  .intro-text-name {
+    font-size: clamp(28px, 5vw, 40px);
+    font-weight: bold;
+    span {
+      color: var(--color-accent);
+    }
+  }
+  .intro-text-who-i-am {
+    margin: 1.5rem 0 1rem;
   }
 }
-.intro-text-who-i-am {
-  margin: 1.5rem 0 0.75rem;
+@media screen and (max-width: 930px) {
+  .intro {
+    flex-direction: column;
+  }
+  .intro-photo {
+    display: block;
+  }
+  .intro-text {
+    margin-top: 3rem;
+    padding: 0;
+  }
+}
+.section:not(.intro),
+header {
+  display: none;
 }
 
 /* EXPERIENCE */
