@@ -81,6 +81,8 @@
 .project-images-reflection {
   padding-right: 2.5rem;
 }
+
+/* Project text */
 .project-description {
   display: inline-block;
   width: 600px;
@@ -104,12 +106,12 @@
 .project-links a:first-of-type {
   margin-right: 1rem;
 }
-.project-description a {
+.project-links a {
   border: 1px solid var(--color-font-light);
   padding: 0.5rem 1rem;
   display: inline-block;
 }
-.project-description a:hover {
+.project-links a:hover {
   background: var(--color-font-light);
   color: var(--color-font-dark);
 }
