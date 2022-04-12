@@ -17,5 +17,5 @@ for (let i = 0; i < navLinks.length; i++) {
 }
 
 const closeNav = () => {
-  nav.classList.toggle('nav-open')
+  nav.classList.remove('nav-open')
 }
