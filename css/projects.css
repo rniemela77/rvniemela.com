@@ -1,0 +1,130 @@
+/* PROJECTS */
+.project {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: var(--project-padding);
+}
+
+/* Project "|" separator decoration */
+.project {
+  position: relative;
+}
+.project:not(:last-of-type):after {
+  position: absolute;
+  content: '';
+  width: 1px;
+  height: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: calc(var(--project-padding) * -1 / 2 - 0.75rem);
+  background: var(--color-font-light);
+  opacity: 0.5;
+}
+
+.project-images {
+  position: relative;
+  padding-right: 2.5rem;
+}
+.project-image img {
+  object-fit: cover;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.project-image {
+  border-radius: 15px;
+  overflow: hidden;
+  border: 4px solid black;
+}
+:root {
+  /* Desktop ratio: 1.6:1 */
+  --desktop-width: 400px;
+  --desktop-height: 250px;
+  /* Mobile ratio: 2:1 */
+  --mobile-width: 100px;
+  --mobile-height: 200px;
+}
+.project-image--desktop {
+  width: clamp(calc(var(--desktop-width) / 2), 56vw, var(--desktop-width));
+  height: clamp(calc(var(--desktop-height) / 2), 35vw, var(--desktop-height));
+}
+.project-image--mobile {
+  position: absolute;
+  right: 0;
+  bottom: 1rem;
+  width: clamp(calc(var(--mobile-width) / 2), 14vw, var(--mobile-width));
+  height: clamp(calc(var(--mobile-height) / 2), 28vw, var(--mobile-height));
+  filter: drop-shadow(0px 5px 3px rgba(0, 0, 0, 0.623));
+}
+/* Phone "notch" */
+.project-image--mobile::after {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30%;
+  height: 0.2rem;
+  background: black;
+  content: '';
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.project-images-reflection {
+  position: absolute;
+  bottom: -152%;
+  left: 0;
+  transform: scaleY(-0.5);
+  transform-origin: top;
+  opacity: 0.06;
+}
+.project-description {
+  display: inline-block;
+  width: 600px;
+  padding-left: 2rem;
+}
+.project-description > * + * {
+  margin-top: 1rem;
+}
+.project-name {
+  font-size: clamp(20px, 4vw, 24px);
+}
+.project-description span {
+  color: var(--color-accent);
+}
+.project-description p:before {
+  content: '+';
+  font-size: 20px;
+  transform: rotate(25deg);
+  color: var(--color-accent);
+}
+.project-links a:first-of-type {
+  margin-right: 1rem;
+}
+.project-description a {
+  border: 1px solid var(--color-font-light);
+  padding: 0.5rem 1rem;
+  display: inline-block;
+}
+.project-description a:hover {
+  background: var(--color-font-light);
+  color: var(--color-font-dark);
+}
+@media screen and (max-width: 1225px) {
+  .project {
+    flex-direction: column;
+    align-items: center;
+  }
+  .project-images {
+    margin-bottom: 2rem;
+  }
+  .project-images-reflection {
+    z-index: -1;
+    opacity: 0.03;
+  }
+  .project-description {
+    width: 100%;
+    max-width: 600px;
+    padding: 0;
+  }
+}

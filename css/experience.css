@@ -1,0 +1,40 @@
+/* EXPERIENCE */
+.experience {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.experience-item {
+  width: 370px;
+  margin: 0 auto;
+}
+.experience-item:not(:last-of-type) {
+  margin-bottom: 3rem;
+}
+.experience-item ul {
+  list-style-image: url('../assets/check.png');
+  list-style-position: inside;
+}
+.experience-item li {
+  line-height: 2;
+}
+.experience-item small {
+  color: var(--color-accent);
+}
+.experience-item p {
+  font-style: italic;
+}
+.experience-item h3 {
+  margin: 0 0 1rem;
+}
+@media screen and (max-width: 475px) {
+  .experience-item {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 420px) {
+  .experience-item small {
+    display: block;
+    padding-left: 2rem;
+  }
+}

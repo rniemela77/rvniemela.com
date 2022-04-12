@@ -1,0 +1,32 @@
+/* CONTACT */
+.contact-content {
+  width: fit-content;
+  margin: 0 auto;
+}
+.contact-lets-chat {
+  margin: 2rem 0;
+  font-size: 30px;
+}
+.contact-line {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+.contact-line:hover {
+  color: var(--color-font-light);
+}
+.contact-line a {
+  display: inline-block;
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+.contact-icon {
+  fill: var(--color-font-light);
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-right: 0.6rem;
+  stroke: none;
+}
+.section.contact {
+  padding-bottom: 10rem;
+}
