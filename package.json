@@ -4,10 +4,7 @@
   "description": "Portfolio Website",
   "main": "index.js",
   "browserslist": "> 0.5%, last 2 versions, not dead",
-  "scripts": {
-    "start": "parcel src/index.html",
-    "build": "parcel build"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rniemela77/rvniemela.com.git"
