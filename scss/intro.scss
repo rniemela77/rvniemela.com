@@ -16,38 +16,40 @@
 
   /* Glowing neon lights */
   animation: rotateHue 6s infinite;
-}
-/* Vignette */
-.intro-photo::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  content: '';
-  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.7);
-  border-radius: 50%;
-  z-index: 1;
-}
-/* Blue haze on photo */
-.intro-photo::after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  content: '';
-  mix-blend-mode: color-dodge;
-  background: rgb(53, 225, 255);
-  opacity: 0.05;
-}
-.intro-photo img {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  object-fit: cover;
+
+  /* Vignette */
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    z-index: 1;
+  }
+  /* Blue haze on photo */
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    mix-blend-mode: color-dodge;
+    background: $color-accent;
+    opacity: 0.05;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+  }
 }
 .intro-text {
   padding-left: 5rem;
@@ -62,9 +64,9 @@
 .intro-text-name {
   font-size: clamp(28px, 5vw, 40px);
   font-weight: bold;
-}
-.intro-text-name span {
-  color: $color-accent;
+  span {
+    color: $color-accent;
+  }
 }
 .intro-text-who-i-am {
   margin: 1.5rem 0 1rem;

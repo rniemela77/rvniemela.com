@@ -2,6 +2,7 @@
 .contact-content {
   width: fit-content;
   margin: 0 auto;
+  padding: 0 0 10rem;
 }
 .contact-lets-chat {
   margin: 2rem 0;
@@ -11,22 +12,19 @@
   display: flex;
   align-items: center;
   margin: 1rem 0;
-}
-.contact-line:hover {
-  color: $color-font-light;
-}
-.contact-line a {
-  display: inline-block;
-  color: $color-accent;
-  text-decoration: underline;
-}
-.contact-icon {
-  fill: $color-font-light;
-  height: 1.5rem;
-  width: 1.5rem;
-  margin-right: 0.6rem;
-  stroke: none;
-}
-.section.contact {
-  padding-bottom: 10rem;
+  .contact-line-icon {
+    fill: $color-font-light;
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-right: 0.6rem;
+    stroke: none;
+  }
+  .contact-line-link {
+    display: inline-block;
+    color: $color-accent;
+    text-decoration: underline;
+  }
+  &:hover {
+    color: $color-font-light;
+  }
 }
