@@ -3,7 +3,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  margin-bottom: var(--project-padding);
+  margin-bottom: $project-padding;
 }
 
 /* Project "|" separator decoration */
@@ -17,8 +17,8 @@
   height: 1.5rem;
   left: 50%;
   transform: translateX(-50%);
-  bottom: calc(var(--project-padding) * -1 / 2 - 0.75rem);
-  background: var(--color-font-light);
+  bottom: calc($project-padding * -1 / 2 - 0.75rem);
+  background: $color-font-light;
   opacity: 0.5;
 }
 
@@ -45,15 +45,15 @@
   --mobile-height: 200px;
 }
 .project-image--desktop {
-  width: clamp(calc(var(--desktop-width) / 2), 56vw, var(--desktop-width));
-  height: clamp(calc(var(--desktop-height) / 2), 35vw, var(--desktop-height));
+  width: clamp(calc($desktop-width / 2), 56vw, $desktop-width);
+  height: clamp(calc($desktop-height / 2), 35vw, $desktop-height);
 }
 .project-image--mobile {
   position: absolute;
   right: 0;
   bottom: 1rem;
-  width: clamp(calc(var(--mobile-width) / 2), 14vw, var(--mobile-width));
-  height: clamp(calc(var(--mobile-height) / 2), 28vw, var(--mobile-height));
+  width: clamp(calc($mobile-width / 2), 14vw, $mobile-width);
+  height: clamp(calc($mobile-height / 2), 28vw, $mobile-height);
   filter: drop-shadow(0px 5px 3px rgba(0, 0, 0, 0.623));
 }
 /* Phone "notch" */
@@ -95,25 +95,25 @@
   font-size: clamp(20px, 4vw, 24px);
 }
 .project-description span {
-  color: var(--color-accent);
+  color: $color-accent;
 }
 .project-description p:before {
   content: '+';
   font-size: 20px;
   transform: rotate(25deg);
-  color: var(--color-accent);
+  color: $color-accent;
 }
 .project-links a:first-of-type {
   margin-right: 1rem;
 }
 .project-links a {
-  border: 1px solid var(--color-font-light);
+  border: 1px solid $color-font-light;
   padding: 0.5rem 1rem;
   display: inline-block;
 }
 .project-links a:hover {
-  background: var(--color-font-light);
-  color: var(--color-font-dark);
+  background: $color-font-light;
+  color: $color-font-dark;
 }
 @media screen and (max-width: 1225px) {
   .project {

@@ -13,15 +13,15 @@
   margin: 1rem 0;
 }
 .contact-line:hover {
-  color: var(--color-font-light);
+  color: $color-font-light;
 }
 .contact-line a {
   display: inline-block;
-  color: var(--color-accent);
+  color: $color-accent;
   text-decoration: underline;
 }
 .contact-icon {
-  fill: var(--color-font-light);
+  fill: $color-font-light;
   height: 1.5rem;
   width: 1.5rem;
   margin-right: 0.6rem;
