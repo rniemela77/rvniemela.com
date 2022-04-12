@@ -145,7 +145,7 @@ strong {
     padding: 0;
   }
 }
-.section:not(.intro),
+.section:not(.intro):not(.experience),
 header {
   display: none;
 }
@@ -177,6 +177,19 @@ header {
   }
   h3 {
     margin: 0 0 1rem;
+  }
+}
+@media screen and (max-width: 475px) {
+  .experience-item {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 420px) {
+  .experience-item {
+    small {
+      display: block;
+      padding-left: 2rem;
+    }
   }
 }
 
