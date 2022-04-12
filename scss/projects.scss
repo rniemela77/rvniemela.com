@@ -36,14 +36,13 @@
   overflow: hidden;
   border: 4px solid #000;
 }
-:root {
-  /* Desktop ratio: 1.6:1 */
-  --desktop-width: 400px;
-  --desktop-height: 250px;
-  /* Mobile ratio: 2:1 */
-  --mobile-width: 100px;
-  --mobile-height: 200px;
-}
+/* Desktop ratio: 1.6:1 */
+$desktop-width: 400px;
+$desktop-height: 250px;
+/* Mobile ratio: 2:1 */
+$mobile-width: 100px;
+$mobile-height: 200px;
+
 .project-image--desktop {
   width: clamp(calc($desktop-width / 2), 56vw, $desktop-width);
   height: clamp(calc($desktop-height / 2), 35vw, $desktop-height);
