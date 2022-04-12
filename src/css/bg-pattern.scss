@@ -1,19 +1,26 @@
 .bg-pattern {
   position: fixed;
-  width: 100vw;
-  height: 100vh;
-  left: 0;
   top: 0;
-  background: rgb(41, 42, 43);
-  box-shadow: inset 0 0 10px rgb(0, 0, 0);
-  background-color: #090909;
-  opacity: 1;
-  background-image: linear-gradient(135deg, #000000 25%, transparent 25%),
-    linear-gradient(225deg, #000000 25%, transparent 25%),
-    linear-gradient(45deg, #000000 25%, transparent 25%),
-    linear-gradient(315deg, #000000 25%, #090909 25%);
-  background-position: 4px 0, 4px 0, 0 0, 0 0;
-  background-size: 4px 4px;
-  background-repeat: repeat;
-  z-index: -1;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+
+  // Colors
+  $bg-color: rgb(10, 10, 10);
+  $dot-color: rgb(0, 0, 0);
+
+  // Dimensions
+  $dot-size: 2px;
+  $dot-space: 4px;
+
+  background: linear-gradient(
+        90deg,
+        $bg-color ($dot-space - $dot-size),
+        transparent 1%
+      )
+      center,
+    linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
+    $dot-color;
+  background-size: $dot-space $dot-space;
 }
