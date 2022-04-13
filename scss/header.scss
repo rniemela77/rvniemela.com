@@ -12,6 +12,14 @@ $header-height: 3.5rem;
 }
 .header-name {
   flex: 1;
+  font-size: 18px;
+  text-transform: uppercase;
+  span {
+    opacity: 0.5;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 1;
+  }
 }
 .nav-list {
   display: flex;
@@ -56,14 +64,44 @@ $header-height: 3.5rem;
     background-image: radial-gradient($color-menu-bg 0.65px, #000000 0.65px);
     background-size: 13px 13px;
   }
+  $cyan: rgba(0, 255, 255, 0.3);
+  $red: rgba(255, 0, 0, 0.3);
+  .nav-item {
+    font-size: clamp(2rem, 10vw, 5rem);
+    text-shadow: 40px 0px 0px $cyan, 20px 0px 0px $red;
+    transition: text-shadow 500ms, opacity 600ms, transform 300ms;
+    opacity: 0;
+    transform: translateX(100px);
+    &:not(:last-of-type) {
+      margin: 0 0 7vh;
+    }
+
+    &:nth-of-type(1),
+    &:nth-of-type(2),
+    &:nth-of-type(3),
+    &:nth-of-type(4) {
+      transition-delay: 0ms;
+    }
+  }
   .nav-open {
     .nav-list {
       right: 0;
     }
     .nav-item {
-      font-size: clamp(2rem, 10vw, 5rem);
-      &:not(:last-of-type) {
-        margin: 0 0 7vh;
+      text-shadow: 1px 0px 0px $cyan, -1px 0px 0px $red;
+      opacity: 1;
+      transform: translateX(0px);
+      &:nth-of-type(1) {
+        transition-delay: 70ms;
+      }
+      &:nth-of-type(2) {
+        transition-delay: 140ms;
+      }
+      &:nth-of-type(3) {
+        transition-delay: 210ms;
+      }
+      &:nth-of-type(4) {
+        transition-delay: 280ms;
       }
     }
   }
