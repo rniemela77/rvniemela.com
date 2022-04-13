@@ -540,6 +540,8 @@ strong {
     top: 3.5rem;
     transition: 0.3s;
     background: rgb(21, 22, 23);
+    background-image: radial-gradient(rgb(21, 22, 23) 0.65px, #000000 0.65px);
+    background-size: 13px 13px;
   }
 
   .nav-open .nav-list {
@@ -667,12 +669,11 @@ strong {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 95vh;
 }
 
 .intro-photo {
-  width: 10rem;
-  height: 10rem;
+  width: clamp(6rem, 30vw, 10rem);
+  height: clamp(6rem, 30vw, 10rem);
   background: rgb(48, 48, 48);
   border-radius: 50%;
   overflow: hidden;
@@ -727,7 +728,7 @@ strong {
 }
 
 .intro-text-name {
-  font-size: clamp(28px, 5vw, 40px);
+  font-size: clamp(24px, 5vw, 40px);
   font-weight: bold;
 }
 .intro-text-name span {
@@ -741,6 +742,7 @@ strong {
 @media screen and (max-width: 930px) {
   .intro {
     flex-direction: column;
+    padding: 7rem 0 3rem;
   }
 
   .intro-photo {
@@ -962,13 +964,39 @@ strong {
   position: relative;
   padding-left: 2rem;
   padding-right: 2rem;
-  min-height: 100vh;
+  min-height: 95vh;
 }
 .section:not(:first-of-type) {
   padding-top: 7rem;
   padding-bottom: 4rem;
   background: linear-gradient(rgba(43, 43, 44, 0.32), rgba(47, 42, 63, 0));
   clip-path: polygon(0 100%, 0 0, 50% 3rem, 100% 0, 100% 100%);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(18, 216, 199);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(232, 235, 226);
+}
+
+@media screen and (max-width: 374px) {
+  html {
+    font-size: 80%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -3,11 +3,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 95vh;
 }
 .intro-photo {
-  width: 10rem;
-  height: 10rem;
+  width: clamp(6rem, 30vw, 10rem);
+  height: clamp(6rem, 30vw, 10rem);
   background: rgb(48, 48, 48);
   border-radius: 50%;
   overflow: hidden;
@@ -62,7 +61,7 @@
   user-select: none;
 }
 .intro-text-name {
-  font-size: clamp(28px, 5vw, 40px);
+  font-size: clamp(24px, 5vw, 40px);
   font-weight: bold;
   span {
     color: $color-accent;
@@ -75,6 +74,7 @@
 @media screen and (max-width: 930px) {
   .intro {
     flex-direction: column;
+    padding: 7rem 0 3rem;
   }
   .intro-photo {
     display: block;
