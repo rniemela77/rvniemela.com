@@ -1066,6 +1066,8 @@ strong {
   text-transform: uppercase;
   font-size: 12px;
   padding: 0.5rem 0.8rem;
+  cursor: pointer;
+  transition: background 300ms ease-in-out, color 300ms ease-in-out;
 }
 .noise-control-label:hover {
   background: rgb(232, 235, 226);
