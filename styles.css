@@ -511,9 +511,12 @@ strong {
 .nav-item-link {
   padding: 0.5rem 1rem;
   transition: 0.3s;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 .nav-item-link:hover {
-  color: rgb(18, 216, 199);
+  background: rgb(232, 235, 226);
+  color: #000;
 }
 
 .nav-icon {
@@ -887,7 +890,6 @@ strong {
 .project-description p:before {
   content: "+";
   font-size: 20px;
-  transform: rotate(25deg);
   color: rgb(18, 216, 199);
 }
 .project-description .project-links a {
