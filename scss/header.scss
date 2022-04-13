@@ -53,6 +53,8 @@ $header-height: 3.5rem;
     transition: 0.3s;
 
     background: $color-menu-bg;
+    background-image: radial-gradient($color-menu-bg 0.65px, #000000 0.65px);
+    background-size: 13px 13px;
   }
   .nav-open {
     .nav-list {
