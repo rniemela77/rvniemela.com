@@ -47,6 +47,10 @@ $header-height: 3.5rem;
   .nav-icon {
     display: block;
   }
+  .nav {
+    opacity: 0;
+    transition: opacity $transition-speed;
+  }
   .nav-list {
     display: flex;
     flex-direction: column;
@@ -58,7 +62,7 @@ $header-height: 3.5rem;
     height: calc(100% - $header-height);
 
     top: $header-height;
-    transition: right $transition-speed, border-left $transition-speed;
+    transition: right $transition-speed;
 
     background: $color-menu-bg;
     background-image: radial-gradient($color-menu-bg 0.65px, #000000 0.65px);
@@ -84,6 +88,7 @@ $header-height: 3.5rem;
     }
   }
   .nav-open {
+    opacity: 0.95;
     .nav-list {
       right: 0;
     }
