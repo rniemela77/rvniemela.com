@@ -1,10 +1,10 @@
-/* INTRO */
-.intro {
+/* ABOUT */
+.about {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.intro-photo {
+.about-photo {
   width: clamp(6rem, 30vw, 10rem);
   height: clamp(6rem, 30vw, 10rem);
   background: rgb(48, 48, 48);
@@ -50,36 +50,36 @@
     object-fit: cover;
   }
 }
-.intro-text {
+.about-text {
   padding-left: 5rem;
   max-width: 30rem;
 }
-.intro-text-hello {
+.about-text-hello {
   height: auto;
   width: clamp(5rem, 16vw, 7rem);
   display: block;
   user-select: none;
 }
-.intro-text-name {
+.about-text-name {
   font-size: clamp(24px, 5vw, 40px);
   font-weight: bold;
   span {
     color: $color-accent;
   }
 }
-.intro-text-who-i-am {
+.about-text-who-i-am {
   margin: 1.5rem 0 1rem;
 }
 
 @media screen and (max-width: 930px) {
-  .intro {
+  .about {
     flex-direction: column;
     padding: 7rem 0 3rem;
   }
-  .intro-photo {
+  .about-photo {
     display: block;
   }
-  .intro-text {
+  .about-text {
     margin-top: 3rem;
     padding: 0;
   }

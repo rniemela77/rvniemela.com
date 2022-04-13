@@ -664,14 +664,14 @@ strong {
   transform: rotate(270deg);
 }
 
-/* INTRO */
-.intro {
+/* ABOUT */
+.about {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.intro-photo {
+.about-photo {
   width: clamp(6rem, 30vw, 10rem);
   height: clamp(6rem, 30vw, 10rem);
   background: rgb(48, 48, 48);
@@ -684,7 +684,7 @@ strong {
   /* Vignette */
   /* Blue haze on photo */
 }
-.intro-photo::before {
+.about-photo::before {
   position: absolute;
   top: 0;
   left: 0;
@@ -695,7 +695,7 @@ strong {
   border-radius: 50%;
   z-index: 1;
 }
-.intro-photo::after {
+.about-photo::after {
   position: absolute;
   top: 0;
   left: 0;
@@ -706,7 +706,7 @@ strong {
   background: rgb(18, 216, 199);
   opacity: 0.05;
 }
-.intro-photo img {
+.about-photo img {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -715,41 +715,41 @@ strong {
   object-fit: cover;
 }
 
-.intro-text {
+.about-text {
   padding-left: 5rem;
   max-width: 30rem;
 }
 
-.intro-text-hello {
+.about-text-hello {
   height: auto;
   width: clamp(5rem, 16vw, 7rem);
   display: block;
   user-select: none;
 }
 
-.intro-text-name {
+.about-text-name {
   font-size: clamp(24px, 5vw, 40px);
   font-weight: bold;
 }
-.intro-text-name span {
+.about-text-name span {
   color: rgb(18, 216, 199);
 }
 
-.intro-text-who-i-am {
+.about-text-who-i-am {
   margin: 1.5rem 0 1rem;
 }
 
 @media screen and (max-width: 930px) {
-  .intro {
+  .about {
     flex-direction: column;
     padding: 7rem 0 3rem;
   }
 
-  .intro-photo {
+  .about-photo {
     display: block;
   }
 
-  .intro-text {
+  .about-text {
     margin-top: 3rem;
     padding: 0;
   }
