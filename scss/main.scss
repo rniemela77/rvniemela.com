@@ -53,3 +53,35 @@
     font-size: 80%;
   }
 }
+
+#noise-control {
+  display: none;
+  &:checked {
+    & ~ .bg-noise {
+      display: block;
+    }
+    & ~ .noise-control-label:after {
+      content: 'on';
+    }
+  }
+  &:not(:checked) {
+    & ~ .bg-noise {
+      display: none;
+    }
+    & ~ .noise-control-label:after {
+      content: 'off';
+    }
+  }
+}
+.noise-control-label {
+  position: fixed;
+  right: 0rem;
+  bottom: 0rem;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 0.5rem 0.8rem;
+  &:hover {
+    background: $color-font-light;
+    color: $color-font-dark;
+  }
+}

@@ -1043,5 +1043,33 @@ strong {
     font-size: 80%;
   }
 }
+#noise-control {
+  display: none;
+}
+#noise-control:checked ~ .bg-noise {
+  display: block;
+}
+#noise-control:checked ~ .noise-control-label:after {
+  content: "on";
+}
+#noise-control:not(:checked) ~ .bg-noise {
+  display: none;
+}
+#noise-control:not(:checked) ~ .noise-control-label:after {
+  content: "off";
+}
+
+.noise-control-label {
+  position: fixed;
+  right: 0rem;
+  bottom: 0rem;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 0.5rem 0.8rem;
+}
+.noise-control-label:hover {
+  background: rgb(232, 235, 226);
+  color: #000;
+}
 
 /*# sourceMappingURL=styles.css.map */
