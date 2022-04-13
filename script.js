@@ -15,8 +15,9 @@ const toggleNav = (navState) => {
 // Make clicking nav links close nav menu
 const navLinks = document.getElementsByClassName('nav-item-link')
 for (let i = 0; i < navLinks.length; i++) {
-  console.log(navLinks[i])
   navLinks[i].addEventListener('click', () => {
-    toggleNav(false)
+    if (window.innerWidth < 1199) {
+      navIcon.click()
+    }
   })
 }
