@@ -531,7 +531,7 @@ strong {
   display: none;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 950px) {
   .nav-icon {
     display: block;
   }
@@ -596,6 +596,11 @@ strong {
   }
   .nav-open .nav-item:nth-of-type(4) {
     transition-delay: 280ms;
+  }
+}
+@media screen and (max-width: 400px) {
+  .header {
+    padding: 0 1rem 0 0.25rem;
   }
 }
 .nav-icon {

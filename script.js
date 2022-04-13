@@ -16,7 +16,7 @@ const toggleNav = (navState) => {
 const navLinks = document.getElementsByClassName('nav-item-link')
 for (let i = 0; i < navLinks.length; i++) {
   navLinks[i].addEventListener('click', () => {
-    if (window.innerWidth < 1199) {
+    if (window.innerWidth <= 950) {
       navIcon.click()
     }
   })
