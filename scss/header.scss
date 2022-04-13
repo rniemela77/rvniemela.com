@@ -24,7 +24,7 @@ $header-height: 3.5rem;
 }
 .nav-item-link {
   padding: 0.5rem 1rem;
-  transition: 0.3s;
+  transition: background $transition-speed, color $transition-speed;
   font-weight: bold;
   text-transform: uppercase;
   &:hover {
@@ -50,7 +50,7 @@ $header-height: 3.5rem;
     height: calc(100% - $header-height);
 
     top: $header-height;
-    transition: 0.3s;
+    transition: right $transition-speed;
 
     background: $color-menu-bg;
     background-image: radial-gradient($color-menu-bg 0.65px, #000000 0.65px);

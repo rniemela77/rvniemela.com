@@ -106,6 +106,7 @@
       border: 1px solid $color-font-light;
       padding: 0.5rem 1rem;
       display: inline-block;
+      transition: background $transition-speed, color $transition-speed;
       &:first-of-type {
         margin-right: 1rem;
       }
