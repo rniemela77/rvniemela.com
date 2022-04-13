@@ -572,7 +572,10 @@ strong {
   }
 
   .nav-open {
-    opacity: 0.95;
+    overflow: hidden;
+  }
+  .nav-open .nav {
+    opacity: 0.97;
   }
   .nav-open .nav-list {
     right: 0;

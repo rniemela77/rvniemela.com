@@ -88,7 +88,10 @@ $header-height: 3.5rem;
     }
   }
   .nav-open {
-    opacity: 0.95;
+    overflow: hidden;
+    .nav {
+      opacity: 0.97;
+    }
     .nav-list {
       right: 0;
     }
