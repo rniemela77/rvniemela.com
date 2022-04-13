@@ -11,7 +11,8 @@ html {
 * {
   box-sizing: inherit;
 }
-*:before, *:after {
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -204,9 +205,9 @@ select {
    * Correct the inability to style clickable types in iOS and Safari.
    */
 button,
-[type=button],
-[type=reset],
-[type=submit] {
+[type='button'],
+[type='reset'],
+[type='submit'] {
   -webkit-appearance: button;
 }
 
@@ -214,9 +215,9 @@ button,
    * Remove the inner border and padding in Firefox.
    */
 button::-moz-focus-inner,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -225,9 +226,9 @@ button::-moz-focus-inner,
    * Restore the focus styles unset by the previous rule.
    */
 button:-moz-focusring,
-[type=button]:-moz-focusring,
-[type=reset]:-moz-focusring,
-[type=submit]:-moz-focusring {
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -277,8 +278,8 @@ textarea {
    * 1. Add the correct box sizing in IE 10.
    * 2. Remove the padding in IE 10.
    */
-[type=checkbox],
-[type=radio] {
+[type='checkbox'],
+[type='radio'] {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -288,8 +289,8 @@ textarea {
 /**
    * Correct the cursor style of increment and decrement buttons in Chrome.
    */
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -297,7 +298,7 @@ textarea {
    * 1. Correct the odd appearance in Chrome and Safari.
    * 2. Correct the outline style in Safari.
    */
-[type=search] {
+[type='search'] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -307,7 +308,7 @@ textarea {
 /**
    * Remove the inner padding in Chrome and Safari on macOS.
    */
-[type=search]::-webkit-search-decoration {
+[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -399,13 +400,19 @@ strong {
 
 @keyframes rotateHue {
   0% {
-    box-shadow: inset 0 0 50px #fff, inset 20px 0 80px #f0f, inset -20px 0 80px #0ff, inset 20px 0 300px #f0f, inset -20px 0 300px #0ff, 0 0 50px #fff, -10px 0 80px #f0f, 10px 0 80px #0ff;
+    box-shadow: inset 0 0 50px #fff, inset 20px 0 80px #f0f,
+      inset -20px 0 80px #0ff, inset 20px 0 300px #f0f, inset -20px 0 300px #0ff,
+      0 0 50px #fff, -10px 0 80px #f0f, 10px 0 80px #0ff;
   }
   50% {
-    box-shadow: inset 0 0 50px #0ff, inset 20px 0 80px #fff, inset -20px 0 80px #f0f, inset 20px 0 300px #fff, inset -20px 0 300px #f0f, 0 0 50px #0ff, -10px 0 80px #fff, 10px 0 80px #f0f;
+    box-shadow: inset 0 0 50px #0ff, inset 20px 0 80px #fff,
+      inset -20px 0 80px #f0f, inset 20px 0 300px #fff, inset -20px 0 300px #f0f,
+      0 0 50px #0ff, -10px 0 80px #fff, 10px 0 80px #f0f;
   }
   100% {
-    box-shadow: inset 0 0 50px #fff, inset 20px 0 80px #f0f, inset -20px 0 80px #0ff, inset 20px 0 300px #f0f, inset -20px 0 300px #0ff, 0 0 50px #fff, -10px 0 80px #f0f, 10px 0 80px #0ff;
+    box-shadow: inset 0 0 50px #fff, inset 20px 0 80px #f0f,
+      inset -20px 0 80px #0ff, inset 20px 0 300px #f0f, inset -20px 0 300px #0ff,
+      0 0 50px #fff, -10px 0 80px #f0f, 10px 0 80px #0ff;
   }
 }
 .bg-noise {
@@ -416,7 +423,7 @@ strong {
   bottom: -50%;
   width: 200%;
   height: 200vh;
-  background: transparent url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
+  background: transparent url('/assets/noise.png') repeat 0 0;
   background-repeat: repeat;
   animation: bg-animation 1s infinite;
   opacity: 0.5;
@@ -467,7 +474,8 @@ strong {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: linear-gradient(90deg, rgb(10, 10, 10) 2px, transparent 1%) center, linear-gradient(rgb(10, 10, 10) 2px, transparent 1%) center, rgb(0, 0, 0);
+  background: linear-gradient(90deg, rgb(10, 10, 10) 2px, transparent 1%) center,
+    linear-gradient(rgb(10, 10, 10) 2px, transparent 1%) center, rgb(0, 0, 0);
   background-size: 4px 4px;
 }
 
@@ -477,7 +485,12 @@ strong {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 15%, rgba(0, 0, 0, 0) 85%, rgba(0, 0, 0, 0.9) 100%);
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0) 15%,
+    rgba(0, 0, 0, 0) 85%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
   z-index: -1;
 }
 
@@ -582,17 +595,20 @@ strong {
 .nav-icon input + div div span:first-child {
   top: 0;
 }
-.nav-icon input + div div span:first-child:before, .nav-icon input + div div span:first-child:after {
+.nav-icon input + div div span:first-child:before,
+.nav-icon input + div div span:first-child:after {
   top: 0;
 }
 .nav-icon input + div div span:last-child {
   bottom: 0;
 }
-.nav-icon input + div div span:last-child:before, .nav-icon input + div div span:last-child:after {
+.nav-icon input + div div span:last-child:before,
+.nav-icon input + div div span:last-child:after {
   bottom: 0;
 }
-.nav-icon input + div div span:before, .nav-icon input + div div span:after {
-  content: "";
+.nav-icon input + div div span:before,
+.nav-icon input + div div span:after {
+  content: '';
   display: block;
   width: 47%;
   height: 2px;
@@ -631,7 +647,8 @@ strong {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   transform: scale(1);
-  transition: stroke-dashoffset 0.5s ease, stroke-dasharray 0.6s ease, transform 0.5s ease, stroke 0.4s ease;
+  transition: stroke-dashoffset 0.5s ease, stroke-dasharray 0.6s ease,
+    transform 0.5s ease, stroke 0.4s ease;
 }
 .nav-icon input + div svg:nth-child(3) {
   transform: rotate(180deg) scale(1);
@@ -639,7 +656,8 @@ strong {
 .nav-icon input:checked + div div {
   transform: rotate(90deg);
 }
-.nav-icon input:checked + div div span:before, .nav-icon input:checked + div div span:after {
+.nav-icon input:checked + div div span:before,
+.nav-icon input:checked + div div span:after {
   background: #fff;
 }
 .nav-icon input:checked + div div span:first-child:before {
@@ -690,7 +708,7 @@ strong {
   left: 0;
   width: 100%;
   height: 100%;
-  content: "";
+  content: '';
   box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.7);
   border-radius: 50%;
   z-index: 1;
@@ -701,7 +719,7 @@ strong {
   left: 0;
   width: 100%;
   height: 100%;
-  content: "";
+  content: '';
   mix-blend-mode: color-dodge;
   background: rgb(18, 216, 199);
   opacity: 0.05;
@@ -769,7 +787,7 @@ strong {
   margin: 0 0 1rem;
 }
 .experience-item ul {
-  list-style-image: url("../assets/check.png");
+  list-style-image: url('../assets/check.png');
   list-style-position: inside;
 }
 .experience-item li {
@@ -807,7 +825,7 @@ strong {
 }
 .project:not(:last-of-type):after {
   position: absolute;
-  content: "";
+  content: '';
   width: 1px;
   height: 1.5rem;
   left: 50%;
@@ -855,7 +873,7 @@ strong {
   width: 30%;
   height: 0.2rem;
   background: black;
-  content: "";
+  content: '';
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
@@ -890,7 +908,7 @@ strong {
   color: rgb(18, 216, 199);
 }
 .project-description p:before {
-  content: "+";
+  content: '+';
   font-size: 20px;
   color: rgb(18, 216, 199);
 }
@@ -980,17 +998,17 @@ strong {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #000;
+  background: rgb(41, 42, 43);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(18, 216, 199);
+  background: #666;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(232, 235, 226);
+  background: #999;
 }
 
 @media screen and (max-width: 374px) {
