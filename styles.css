@@ -1006,7 +1006,7 @@ strong {
   color: rgb(18, 216, 199);
   text-decoration: underline;
 }
-.contact-line:hover {
+.contact-line .contact-line-link:hover {
   color: rgb(232, 235, 226);
 }
 

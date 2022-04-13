@@ -22,8 +22,8 @@
     display: inline-block;
     color: $color-accent;
     text-decoration: underline;
-  }
-  &:hover {
-    color: $color-font-light;
+    &:hover {
+      color: $color-font-light;
+    }
   }
 }
