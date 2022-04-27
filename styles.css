@@ -824,6 +824,10 @@ strong {
 .experience-item li {
   line-height: 2;
 }
+.experience-item li small {
+  display: block;
+  padding-left: 1rem;
+}
 .experience-item small {
   color: rgb(18, 216, 199);
 }

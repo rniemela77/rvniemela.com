@@ -16,10 +16,15 @@
   }
   li {
     line-height: 2;
+    small {
+      display: block;
+      padding-left: 1rem;
+    }
   }
   small {
     color: $color-accent;
   }
+
   p {
     font-style: italic;
   }
