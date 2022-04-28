@@ -35,23 +35,39 @@
     height: 100%;
   }
 
-  /* Desktop ratio: 1.6:1 */
+  /* Desktop ratio: 2:1 */
+  $desktop-multiplier: 0.5;
   $desktop-width: 400px;
-  $desktop-height: 250px;
-  /* Mobile ratio: 1:2 */
+  $desktop-height: $desktop-width * $desktop-multiplier;
+  /* Mobile ratio: 1:1.75 */
+  $mobile-multiplier: 1.75;
   $mobile-width: 100px;
-  $mobile-height: 200px;
+  $mobile-height: $mobile-width * $mobile-multiplier;
+
+  $desktop-width-rate: 62vw;
+  $desktop-height-rate: $desktop-width-rate * $desktop-multiplier;
+
+  $mobile-width-rate: 15vw;
+  $mobile-height-rate: $mobile-width-rate * $mobile-multiplier;
 
   &--desktop {
-    width: clamp(calc($desktop-width / 2), 56vw, $desktop-width);
-    height: clamp(calc($desktop-height / 2), 35vw, $desktop-height);
+    width: clamp(calc($desktop-width / 2), $desktop-width-rate, $desktop-width);
+    height: clamp(
+      calc($desktop-height / 2),
+      $desktop-height-rate,
+      $desktop-height
+    );
   }
   &--mobile {
     position: absolute;
     right: 0;
     bottom: 1rem;
-    width: clamp(calc($mobile-width / 2), 14vw, $mobile-width);
-    height: clamp(calc($mobile-height / 2), 28vw, $mobile-height);
+    width: clamp(calc($mobile-width / 2), $mobile-width-rate, $mobile-width);
+    height: clamp(
+      calc($mobile-height / 2),
+      $mobile-height-rate,
+      $mobile-height
+    );
     filter: drop-shadow(0px 5px 3px rgba(0, 0, 0, 0.623));
     &::after {
       /* Phone "notch" */
