@@ -5,7 +5,6 @@
 @import 'typography.scss';
 @import 'animations.scss';
 
-@import 'bg-noise.scss';
 @import 'bg-pattern.scss';
 @import 'bg-vignette.scss';
 
@@ -51,44 +50,5 @@
 @media screen and (max-width: 374px) {
   html {
     font-size: 80%;
-  }
-}
-
-#noise-control {
-  top: $header-height;
-  position: fixed;
-  right: 0;
-  z-index: 999;
-  height: 1rem;
-  width: 1rem;
-  accent-color: $color-accent;
-  background: none;
-  opacity: 0.5;
-  &:hover {
-    opacity: 1;
-  }
-  &:checked {
-    & ~ .bg-noise {
-      display: block;
-    }
-  }
-  &:not(:checked) {
-    & ~ .bg-noise {
-      display: none;
-    }
-  }
-}
-.noise-control-label {
-  position: fixed;
-  right: 1rem;
-  top: $header-height;
-  text-transform: uppercase;
-  font-size: 12px;
-  z-index: 999;
-  padding: 0.2rem;
-  cursor: pointer;
-  opacity: 0.5;
-  &:hover {
-    opacity: 1;
   }
 }
