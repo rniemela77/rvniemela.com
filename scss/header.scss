@@ -43,7 +43,7 @@ $header-height: 3.5rem;
 .nav-icon {
   display: none;
 }
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1050px) {
   .nav-icon {
     display: block;
   }
@@ -110,6 +110,9 @@ $header-height: 3.5rem;
       }
       &:nth-of-type(4) {
         transition-delay: 280ms;
+      }
+      &:nth-of-type(5) {
+        transition-delay: 350ms;
       }
     }
   }

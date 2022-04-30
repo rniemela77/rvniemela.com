@@ -70,6 +70,18 @@
 .about-text-who-i-am {
   margin: 1.5rem 0 1rem;
 }
+.about-text-resume {
+  margin-top: 1rem;
+  font-size: 90%;
+  .about-text-resume-link {
+    color: $color-accent;
+    display: inline-block;
+    text-decoration: underline;
+    &:hover {
+      color: $color-font-light;
+    }
+  }
+}
 
 @media screen and (max-width: 930px) {
   .about {
