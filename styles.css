@@ -775,7 +775,7 @@ strong {
 }
 
 .experience-item {
-  width: 370px;
+  width: clamp(300px, 95vw, 508px);
   margin: 0 auto;
 }
 .experience-item h3 {

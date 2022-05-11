@@ -5,7 +5,7 @@
   justify-content: center;
 }
 .experience-item {
-  width: 370px;
+  width: clamp(300px, 95vw, 508px);
   margin: 0 auto;
   h3 {
     margin: 0 0 1rem;
